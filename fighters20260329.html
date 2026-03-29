@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ファイターズ・スポーツ号外</title>
+<style>
+    body {
+        font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+        background-color: #e0e0e0;
+        margin: 0;
+        padding: 20px;
+        color: #111;
+    }
+    .newspaper {
+        background-color: #fff;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 30px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        border: 2px solid #333;
+    }
+    .header {
+        border-bottom: 4px solid #111;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .header h1 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: 900;
+        letter-spacing: 2px;
+    }
+    .header .date-info {
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .main-headline {
+        font-size: 42px;
+        font-weight: 900;
+        color: #cc0000;
+        line-height: 1.1;
+        margin: 0 0 10px 0;
+        text-shadow: 1px 1px 0 #fff, 2px 2px 0 #333;
+        letter-spacing: -1px;
+    }
+    .sub-headline {
+        font-size: 24px;
+        font-weight: bold;
+        background-color: #111;
+        color: #fff;
+        padding: 5px 10px;
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+    .lead-text {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        column-count: 2;
+        column-gap: 30px;
+        font-weight: 500;
+    }
+    .section-title {
+        font-size: 22px;
+        border-left: 8px solid #cc0000;
+        padding-left: 10px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #ddd;
+    }
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        gap: 20px;
+    }
+    .player-card {
+        border: 2px solid #111;
+        background-color: #f9f9f9;
+        display: flex;
+        flex-direction: column;
+    }
+    .player-card.mvp {
+        border: 4px solid #daa520;
+        background-color: #fffdf0;
+        box-shadow: 0 0 15px rgba(218, 165, 32, 0.4);
+    }
+    .player-header {
+        background-color: #111;
+        color: #fff;
+        padding: 8px 12px;
+        font-size: 18px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+    }
+    .mvp .player-header {
+        background-color: #daa520;
+        color: #000;
+    }
+    .stats-bar {
+        background-color: #eee;
+        padding: 5px 10px;
+        font-size: 13px;
+        font-weight: bold;
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .mvp .stats-bar {
+        background-color: #fceeb5;
+    }
+    .eval-text {
+        padding: 15px;
+        font-size: 15px;
+        line-height: 1.5;
+        flex-grow: 1;
+    }
+    .bench-card {
+        grid-column: 1 / -1;
+        border: 2px dashed #666;
+        background-color: #f0f8ff;
+    }
+    .bench-header {
+        background-color: #4682b4;
+        color: #fff;
+        padding: 8px 12px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<div class="newspaper">
+    <div class="header">
+        <h1>ファイターズ・スポーツ</h1>
+        <div class="date-info">令和8年3月29日 (日) | 会長杯 Cブロック第3試合</div>
+    </div>
+
+    <h2 class="main-headline">ファイターズ大爆発！<br>怒涛の11安打12得点で3回コールド圧勝！</h2>
+    <div class="sub-headline">驚異のスタメン三振ゼロ！どこからでも点が取れる猛打賞</div>
+
+    <div class="lead-text">
+        北本総合公園にファイターズの快音が鳴り響いた！3月29日に行われたスポーツ協会会長杯・連盟会長杯ソフトボール大会Cブロック第3試合、ファイターズは松風を相手に初回から猛攻を展開。1番・坂本毅から始まる切れ目のない打線が爆発し、終わってみれば12-1の3回コールドという圧倒的な強さを見せつけた。投げては先発の山中聡士が3回ノーヒットの完璧なピッチング。ベンチを含めたチーム全員で勝ち取った、会心の勝利だ！
+    </div>
+
+    <h3 class="section-title">本日の出場選手 採点＆短評</h3>
+    
+    <div class="cards-container">
+        
+        <div class="player-card mvp">
+            <div class="player-header">
+                <span>【3番・投】山中 聡士</span>
+                <span>★ 本日のMVP ★</span>
+            </div>
+            <div class="stats-bar">
+                <span>[打撃] 打数:2 安打:2 得点:2 四死:1</span>
+                <span>[投球] 3回 被安打:0 自責点:0 奪三振:1 球数:39</span>
+            </div>
+            <div class="eval-text">
+                文句なしのMVP！先発マウンドを託されると、3回を投げて「被安打ゼロ」のノーヒットピッチング！自責点0、わずか39球で相手打線をねじ伏せた。自らライナーを好捕して併殺を完成させるなど守備センスも抜群。さらに打席でも2安打1四球と全打席出塁を達成。「打ってよし、投げてよし」の無双状態でチームを牽引した！
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="player-header"><span>【1番・遊】坂本 毅</span></div>
+            <div class="stats-bar"><span>打数:2 安打:1 打点:0 得点:2 四死:1 三振:0</span></div>
+            <div class="eval-text">
+                切り込み隊長として申し分ない働きでチームに勢いをもたらした！2回には右翼線寄りを痛烈に破る三塁打を放ち、鮮やかにホームイン。3回もしっかりと四球を選んで出塁し、大量得点の起点となる見事な活躍。相手バッテリーに常にプレッシャーを与え続ける、まさにファイターズの頼れる核弾頭だ！
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="player-header"><span>【2番・三】田坂 亮汰</span></div>
+            <div class="stats-bar"><span>打数:2 安打:2 打点:2 得点:2 四死:0 三振:0</span></div>
+            <div class="eval-text">
+                若き攻守の要として大暴れ！打席ではライトへの犠牲フライを含む2打数2安打2打点と、チャンスで完璧な仕事ぶり。守備でも魅せた。サードへ飛んだ痛烈な当たりを2度もダイレクトキャッチする鉄壁のフィールディング！バットでもグラブでもチームを熱く盛り上げ、大勝の原動力となった。
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="player-header"><span>【4番・捕】吉長 敏雄</span></div>
+            <div class="stats-bar"><span>打数:3 安打:1 打点:1 得点:1 四死:0 三振:0</span></div>
+            <div class="eval-text">
+                扇の要として、MVP山中のノーヒットピッチングを完璧にリード！キャッチングと配球で相手打線に的を絞らせず、最少失点に抑え込んだ功労者だ。3回には三遊間を痛烈に破るヒットを放ち、しっかり打点もマーク。攻守両面でベテランらしい勝負強さと存在感を発揮した！
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="player-header"><span>【5番・一】森永 稔</span></div>
+            <div class="stats-bar"><span>打数:1 安打:1 打点:3 得点:2 四死:2 三振:0</span></div>
+            <div class="eval-text">
+                恐怖の5番打者として大爆発！初回、右中間へ鮮やかな2点タイムリーを放ち主導権を握ると、3回には2度の四球を選び、チームトップの3打点と大暴れ。守備でもセカンドからの難しい送球を華麗にすくい上げるファインプレーを披露。選球眼、勝負強さ、堅守の三拍子揃った大黒柱の貫禄を見せつけた！
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="player-header"><span>【6番・左】吉野 雄二</span></div>
+            <div class="stats-bar"><span>打数:2 安打:1 打点:1 得点:1 四死:1 三振:0</span></div>
+            <div class="eval-text">
+                打線のつながりを支える頼れる6番！初回の猛攻では三遊間を鋭く抜くヒットを放ち、相手のミスも誘ってチャンスを拡大し打点も稼いだ。3回にも四球を選んで出塁し、ビッグイニングの演出に一役買った。レフトの守備でも確実にフライを処理し、外野の要として安定感抜群の働きを見せた！
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="player-header"><span>【7番・右】三本木 猛</span></div>
+            <div class="stats-bar"><span>打数:2 安打:1 打点:0 得点:1 四死:0 三振:0</span></div>
+            <div class="eval-text">
+                俊足と巧打で相手守備陣をかき回した！3回の第2打席ではショート右への渋いヒットで出塁。すかさず自慢の足で盗塁を決め、後続の打点でホームを踏むなど、貴重な追加点をもたらす足場を作った。下位打線にいながら、いつでも得点機を作り出せる機動力はファイターズの大きな武器だ！
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="player-header"><span>【途中出場・右】荻野 祐一</span></div>
+            <div class="stats-bar"><span>打数:1 安打:0 打点:0 得点:0 四死:0 三振:0</span></div>
+            <div class="eval-text">
+                3回からライトの守備に就き、途中出場でしっかり試合を締めた！打席ではサードフライに倒れたものの、初球から積極的にスイングしていく姿勢はベンチを大いに盛り上げた。短い出場機会でも常に準備を怠らない集中力の高さはチームにとって欠かせない。次戦での快音に期待大だ！
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="player-header"><span>【8番・中】萩原 司郎</span></div>
+            <div class="stats-bar"><span>打数:2 安打:1 打点:2 得点:0 四死:0 三振:0</span></div>
+            <div class="eval-text">
+                8番打者ながら、勝負を決める決定的な仕事をやってのけた！初回、大量点のチャンスで打席に立つと、ライト前へ鮮やかに弾き返す2点タイムリーヒット！この一打が相手の戦意を完全に喪失させ、序盤での大量リードを決定づけた。下位打線からでも容赦なくランナーを還せる恐怖のバッティングだ！
+            </div>
+        </div>
+
+        <div class="player-card">
+            <div class="player-header"><span>【9番・二】中野 澄人</span></div>
+            <div class="stats-bar"><span>打数:2 安打:1 打点:2 得点:1 四死:0 三振:0</span></div>
+            <div class="eval-text">
+                9番に座る「隠れ主軸」が大暴れ！3回、迎えた第2打席。振り抜いた打球はセカンドの左を抜け、右中間を深々と破る豪快な2点タイムリースリーベース！塁上を駆け抜けチームを最高潮に盛り上げた。セカンドの守備でも軽快な動きを見せ、1番・坂本へと繋ぐ最高のラストバッターとして躍動した！
+            </div>
+        </div>
+
+        <div class="player-card bench-card">
+            <div class="bench-header">【誇り高き裏方戦士】大場 貞幸 / 早川 孝一 / 筑 康夫</div>
+            <div class="eval-text">
+                「縁の下の力持ち」なしにこのコールド勝ちは語れない！<b>大場</b>はイニング間の投球練習でキャッチャーを務め、エース山中の好投を引き出すブルペンの功労者。<b>早川</b>はランナーコーチとして誰よりも声を張り上げ、グラウンドの士気を爆上げした。<b>筑</b>もコーチに立ちつつ、時計や打順メモ、出欠確認など細やかな気配りでチームを支え尽くした。出場機会こそ無かったが、彼らの熱いサポートが間違いなくチームに勝利をもたらした！
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
